@@ -1,4 +1,5 @@
 import 'package:application_form/task2_pages/task2_main_page.dart';
+import 'package:application_form/task3_page/task3_home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: MainPage()
       //home: LoginPage(),
-      home: Task2MainPage(),
+      //home: Task2MainPage(),
+      home: Task3HomePage(),
     );
   }
 }
