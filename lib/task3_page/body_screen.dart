@@ -18,45 +18,50 @@ class _BodyScreenState extends State<BodyScreen> {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+        backgroundColor: Colors.white,
         body: SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      physics: BouncingScrollPhysics(),
-      child: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 10),
-        child: Column(
-          children: [
-            Row(
+          scrollDirection: Axis.vertical,
+          physics: const BouncingScrollPhysics(),
+          child: Padding(
+            padding: const EdgeInsets.only(left: 10, right: 10),
+            child: Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: Container(
-                    height: 15,
-                    width: 5,
-                    color: primary,
-                  ),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20),
+                      child: Container(
+                        height: 15,
+                        width: 5,
+                        color: primary,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10, top: 20),
+                      child: Text(
+                        'অনুসন্ধান ফলাফল',
+                        style: TextStyle(fontSize: 20, color: primary),
+                      ),
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 10, top: 20),
-                  child: Text(
-                    'অনুসন্ধান ফলাফল',
-                    style: TextStyle(fontSize: 20, color: primary),
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 50),
+                    child: Column(
+                      children: const [
+                        Text(
+                          'কোনো ফলাফল পাওয়া যায়নি',
+                          style: TextStyle(color: Colors.red, fontSize: 20),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
+                )
               ],
             ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 50),
-                child: Text(
-                  'কোনো ফলাফল পাওয়া যায়নি',
-                  style: TextStyle(color: Colors.red, fontSize: 20),
-                ),
-              ),
-            )
-          ],
-        ),
-      ),
-    ));
+          ),
+        ));
   }
 }
 
